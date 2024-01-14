@@ -1,113 +1,332 @@
-import Image from 'next/image'
+import React from "react";
+import Avatar from "./avatar";
+import CartTable from "./cartTable";
 
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+{
+  /**Creating one array to hold the data of contact cards */
 }
+const data = [
+  {
+    id: "sunita-abc123",
+    name: "Sunita Kumar",
+    job: "Electrical Engineer",
+    email: "sunita.kumar@acme.co",
+  },
+  {
+    id: "henderson-def456",
+    name: "Henderson G. Sterling II",
+    job: "Receptionist",
+    email: "henderson-the-second@acme.co",
+  },
+  {
+    id: "aio-ghi789",
+    name: "Aoi Kobayashi",
+    job: "President",
+    email: "kobayashi.aoi@acme.co",
+  },
+];
+
+
+
+{
+  /**Creating one array to hold the data of avatars */
+}
+const avatarData = [
+  {
+    id: "001",
+    alt: "person with curly hair and a black T-shirt",
+  },
+  {
+    id: "002",
+    alt: "person wearing a hijab and glasses",
+  },
+  {
+    id: "003",
+    alt: "person with short hair wearing a blue hoodie",
+  },
+  {
+    id: "004",
+    alt: "person with a pink mohawk and a raised eyebrow",
+  },
+];
+
+{
+  /**Creating one array to hold the data of shopping cart */
+}
+const items = [
+  {
+  id: 'hk123',
+  imageSrc: 'https://sandpack-bundler.vercel.app/img/shopping-cart-coffee-machine.jpg',
+  imageAlt: 'A pink drip coffee machine with the “Hello Kitty” logo',
+  title: '“Hello Kitty” Coffee Machine',
+  price: '89.99',
+  inStock: true,
+  },
+  {
+  id: 'co999',
+  imageSrc: 'https://sandpack-bundler.vercel.app/img/shopping-cart-can-opener.jpg',
+  imageAlt: 'A black can opener',
+  title: 'Safety Can Opener',
+  price: '19.95',
+  inStock: false,
+  },
+  {
+  id: 'cnl333',
+  imageSrc: 'https://sandpack-bundler.vercel.app/img/shopping-cart-night-light.png',
+  imageAlt: 'A kid-friendly nightlight sculpted to look like a dog astronaut',
+  title: 'Astro-pup Night Light',
+  price: '130.00',
+  inStock: true,
+  },
+  {
+  id: 'scb777',
+  imageSrc: 'https://sandpack-bundler.vercel.app/img/shopping-cart-backpack.jpg',
+  imageAlt: 'A pink backpack with a unicorn illustration',
+  title: 'Magical Unicorn Backpack',
+  price: '74.98',
+  inStock: true,
+  },
+ ];
+
+{
+  /**Creating Myform Components*/
+}
+function MyForm() {
+  return (
+    <form>
+      <label htmlFor="search-input">Search:</label>
+      <input id="search-input" />
+      <button aria-label="Submit" className="submit-btn">
+        <img
+          alt=""
+          src="https://sandpack-bundler.vercel.app/img/arrow-right.svg"
+        />
+      </button>
+    </form>
+  );
+}
+
+
+{
+  /*this is component*/
+}
+const GreetingFunction = ({ name = "fella" }) => {
+  return (
+    <>
+      <p
+        style={{
+          fontSize: "1.25rem",
+          textAlign: "center",
+          color: "sienna",
+        }}
+      >
+        Greetings, {name}!
+      </p>
+    </>
+  );
+};
+
+
+{
+  /**Creating reddanger button component */
+}
+const RedDangerButton = ({ buttonText = "dummyVal" }) => {
+  return (
+    <>
+      <button
+        style={{
+          color: "white",
+          backgroundColor: "red",
+          borderRadius: "2px",
+          textAlign: "center",
+          margin: "10px",
+        }}
+      >
+        {buttonText}
+      </button>
+    </>
+  );
+};
+
+
+{
+  /**Creating CrmCardDetails  component */
+}
+const CrmCardDetails = ({
+  name = "fella",
+  job = "fella job",
+  email = "howFella@gmail.com",
+}) => {
+  return (
+    <>
+      <li className="contact-card">
+        <h2>{name}</h2>
+        <dl>
+          <dt>Job</dt>
+          <dd>{job}</dd>
+          <dt>Email</dt>
+          <dd>{email}</dd>
+        </dl>
+      </li>
+    </>
+  );
+};
+
+
+{
+  /* creating buttons exercise */
+}
+const RedGreenButtonComponent = ({ buttonText, color }) => {
+  return (
+    <>
+      <button
+        style={{
+          border: "2px solid",
+          color: color,
+          borderColor: color,
+          background: "white",
+          borderRadius: 4,
+          padding: 16,
+          margin: 8,
+        }}
+      >
+        {buttonText}
+      </button>
+    </>
+  );
+};
+
+
+
+
+
+const page = () => {
+  
+  
+  {
+    /*  
+      return (
+      <>
+      <GreetingFunction name="anita" />
+      <GreetingFunction name="vinita" />
+      <GreetingFunction  />
+      <MyForm/>
+      <RedDangerButton/>
+      </>
+      );
+    */
+  }
+
+
+  {
+    /*
+        return (
+            <ul>
+            <CrmCardDetails
+                name="Sunita Kumar"
+                job="Electrical Engineer"
+                email="sunita.kumar@acme.co"
+            />
+
+            <CrmCardDetails
+                name="Henderson G. Sterling II"
+                job="Receptionist"
+                email="henderson-the-second@acme.co"
+            />
+
+            <CrmCardDetails
+                name="Sunita Kumar"
+                job="Electrical Engineer"
+                email="sunita.kumar@acme.co"
+            />
+            </ul>
+        
+        );
+    */
+  }
+
+
+
+  {
+    /* for button exercise
+      return (
+        <>
+          <RedGreenButtonComponent buttonText="Cancel" color="red" />
+
+          <RedGreenButtonComponent buttonText="Confirm" color="green" />
+
+          <RedGreenButtonComponent buttonText="dummy" color="blue" />
+        </>
+      );
+  */
+  }
+
+
+  {
+    /* added for crm card detals using array of objects 
+      return (
+        <ul>
+          {data.map((contact) => (
+            <CrmCardDetails
+            key={contact.id}
+              name={contact.name}
+              job={contact.job}
+              email={contact.email}
+            />
+          ))}
+        </ul>
+      );
+  */
+  }
+
+  
+
+  // {
+  //   /** Doing avatars exercise */
+  // }
+  // const url = "https://sandpack-bundler.vercel.app/img/avatars";
+  // return (
+  //   <div className="avatar-set">
+  //     {avatarData.map((avatar) => (
+  //        <Avatar
+  //        key={avatar.id}
+  //         src={`${url}/${avatar.id}.png`}
+  //         alt={avatar.alt}
+  //       />
+  //     ))}
+  //   </div>
+  // );
+
+
+
+  {
+    /** Doing Shopping Cart exercise */
+  }
+
+  const inStock = items.filter( item => item.inStock);
+  const outStock = items.filter( item => !item.inStock);
+  return (
+    <>
+    <h2>Shopping cart</h2>
+    <CartTable items={inStock} />
+    <div className="actions">
+      <button
+         style={{
+          color: "white",
+          backgroundColor: "blue",
+          borderRadius: "5px",
+          textAlign: "center",
+          padding:"9px",
+          margin: "20px",
+        }}
+      >Continue checkout</button>
+    </div>
+   
+    <h2>Sold out</h2>
+    <CartTable items={outStock} />
+    </>
+    );
+};
+
+export default page;
